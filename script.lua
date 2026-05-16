@@ -1,5 +1,5 @@
 local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
+local character = player.Character or player.CharacterAdded:wait()
 
 local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local Humanoid = character:WaitForChild("Humanoid")
