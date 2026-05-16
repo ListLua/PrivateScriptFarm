@@ -4,7 +4,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local Humanoid = character:WaitForChild("Humanoid")
 
-if player:GetAttribute("ai") and character and humanoid then
+if player:GetAttribute("ai") and character and HumanoidRootPart and Humanoid then
    return
 end
 
