@@ -8,6 +8,8 @@ if player:GetAttribute("ai") and character and HumanoidRootPart and Humanoid the
    return
 end
 
+print("Inited")
+
 player:SetAttribute("ai", true)
 
 local randomPos = {
