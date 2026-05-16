@@ -8,8 +8,6 @@ if player:GetAttribute("ai") and character and HumanoidRootPart and Humanoid the
    return
 end
 
-print("Inited")
-
 player:SetAttribute("ai", true)
 
 local randomPos = {
@@ -30,12 +28,12 @@ while task.wait() do
 local waypoints = path:GetWaypoints()
 
 for i = 1, #waypoints do
-    humanoid:MoveTo(waypoints[i].Position)
+    Humanoid:MoveTo(waypoints[i].Position)
 
-    humanoid.MoveToFinished:wait()
+    Humanoid.MoveToFinished:wait()
 end
 
-humanoid:MoveTo(HumanoidRootPart.Position + HumanoidRootPart.CFrame.LookVector * 2)
+Humanoid:MoveTo(HumanoidRootPart.Position + HumanoidRootPart.CFrame.LookVector * 2)
 
 task.wait(10)
 
@@ -46,9 +44,9 @@ path:ComputeAsync(HumanoidRootPart.Position, anySpawnpoint.Position)
 local waypoints = path:GetWaypoints()
 
 for i = 1, #waypoints do
-    humanoid:MoveTo(waypoints[i].Position)
+    Humanoid:MoveTo(waypoints[i].Position)
 
-    humanoid.MoveToFinished:wait()
+    Humanoid.MoveToFinished:wait()
 end
 end
 end)
