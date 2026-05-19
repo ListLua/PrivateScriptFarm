@@ -1,6 +1,16 @@
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:wait()
 
+local legacyPlace = 93712201161812
+local presentPlace = 13775256536
+
+local TeleportService = game:GetService("TeleportService")
+
+if game.PlaceId == presentPlace then
+   TeleportService:Teleport(legacyPlace, game.Players.LocalPlayer)
+   return
+end
+
 local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local Humanoid = character:WaitForChild("Humanoid")
 
@@ -53,4 +63,5 @@ end)
 
 if not success then
    player:SetAttribute("ai", false)
+   TeleportService:Teleport(legacyPlace, game.Players.LocalPlayer)
 end
