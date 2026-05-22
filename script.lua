@@ -20,12 +20,12 @@ end
 
 player:SetAttribute("ai", true)
 
-task.spawn(function()
-    while player:GetAttribute("ai") do
-       game:HttpGet(`http://192.168.1.102:3000/heartbeat?bot={player.Name}`)
-       task.wait(15)
-    end
-end)
+--task.spawn(function()
+--    while player:GetAttribute("ai") do
+--       game:HttpGet(`http://192.168.1.102:3000/heartbeat?bot={player.Name}`)
+--       task.wait(15)
+--    end
+--end)
 
 local randomPos = {
    Vector3.new(44, 5, -159),
